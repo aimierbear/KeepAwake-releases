@@ -1,6 +1,6 @@
 # KeepAwake
 
-**[English](README.md) · [简体中文](README.zh-CN.md) · [繁體中文](README.zh-TW.md) · [日本語](README.ja.md) · [한국어](README.ko.md)**
+**[English](README.md) · [简体中文](README.zh-CN.md) · [繁體中文](README.zh-TW.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Español](README.es.md) · [Français](README.fr.md) · [Deutsch](README.de.md) · [Português](README.pt-BR.md) · [Italiano](README.it.md)**
 
 두 개의 독립 스위치로 Mac의 절전 동작을 세밀하게 제어하는 macOS 메뉴 막대 앱 — 덮개를 닫은 상태에서도 Mac을 깨어 있게 유지하고, 작업 중 유휴 절전을 차단합니다.
 

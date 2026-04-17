@@ -1,6 +1,6 @@
 # KeepAwake
 
-**[English](README.md) · [简体中文](README.zh-CN.md) · [繁體中文](README.zh-TW.md) · [日本語](README.ja.md) · [한국어](README.ko.md)**
+**[English](README.md) · [简体中文](README.zh-CN.md) · [繁體中文](README.zh-TW.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Español](README.es.md) · [Français](README.fr.md) · [Deutsch](README.de.md) · [Português](README.pt-BR.md) · [Italiano](README.it.md)**
 
 一款 macOS 選單列小工具，用兩個獨立開關精準控制 Mac 的睡眠行為——闔蓋繼續執行、阻擋閒置觸發的睡眠。
 

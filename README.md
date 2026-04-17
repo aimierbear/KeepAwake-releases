@@ -1,6 +1,6 @@
 # KeepAwake
 
-**[English](README.md) · [简体中文](README.zh-CN.md) · [繁體中文](README.zh-TW.md) · [日本語](README.ja.md) · [한국어](README.ko.md)**
+**[English](README.md) · [简体中文](README.zh-CN.md) · [繁體中文](README.zh-TW.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Español](README.es.md) · [Français](README.fr.md) · [Deutsch](README.de.md) · [Português](README.pt-BR.md) · [Italiano](README.it.md)**
 
 A macOS menu-bar app that controls MacBook sleep behavior with two independent switches — keep your Mac awake with the lid closed, and block idle-triggered sleep while you work.
 
