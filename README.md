@@ -28,7 +28,7 @@ Every `.dmg` is signed with Developer ID `C3SNXE45AV (Xiaoneng Wu)` and notarize
 
 ## 📥 Install
 
-1. Download `KeepAwake-0.2.0.dmg` from the [latest release](../../releases/latest)
+1. Download `KeepAwake-0.3.0.dmg` from the [latest release](../../releases/latest)
 2. Double-click the DMG to mount, drag **KeepAwake.app** into `/Applications`
 3. Launch from Launchpad or Applications
 4. The first time you toggle "Lid-closed awake", macOS will ask permission to add a background item — click **Allow**
@@ -56,6 +56,17 @@ Every `.dmg` is signed with Developer ID `C3SNXE45AV (Xiaoneng Wu)` and notarize
 `Prevent idle sleep` also overrides battery-saving behavior. Turn it on when you need it, off when you don't.
 
 **KeepAwake does not monitor temperature or load. Risk management is up to you.**
+
+### 🌡️ v0.3: Passive Thermal Guard (default on)
+
+While "Lid-closed awake" is on, KeepAwake observes the system thermal state (`NSProcessInfo.thermalState`):
+
+- `Serious` sustained for 60 s → automatically turns "Lid-closed awake" off so the system can sleep and cool down
+- `Critical` → turns it off immediately
+
+A user notification is posted when the guard fires, and the menu shows a reminder banner. You can disable the guard in the menu's preferences ("Thermal guard on lid-close"), but **this is not recommended**.
+
+**Reminder: passive software protection does not replace physical cooling.** Still avoid "lid closed + heavy load + blocked vents".
 
 ## 🔒 About the Source
 

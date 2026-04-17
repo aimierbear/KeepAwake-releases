@@ -28,7 +28,7 @@ Cada `.dmg` está firmado con el Developer ID `C3SNXE45AV (Xiaoneng Wu)` y notar
 
 ## 📥 Instalación
 
-1. Descarga `KeepAwake-0.2.0.dmg` desde la [última versión](../../releases/latest)
+1. Descarga `KeepAwake-0.3.0.dmg` desde la [última versión](../../releases/latest)
 2. Haz doble clic en el DMG para montarlo y arrastra **KeepAwake.app** a `/Applications`
 3. Inicia desde Launchpad o Aplicaciones
 4. La primera vez que actives "Despierto con tapa cerrada", macOS pedirá permiso para añadir un elemento en segundo plano → haz clic en **Permitir**
@@ -56,6 +56,17 @@ Cada `.dmg` está firmado con el Developer ID `C3SNXE45AV (Xiaoneng Wu)` y notar
 `Evita suspensión por inactividad` también anula el ahorro de batería. Actívalo solo cuando lo necesites, desactívalo cuando termines.
 
 **KeepAwake no monitoriza temperatura ni carga. La gestión del riesgo depende de ti.**
+
+### 🌡️ Novedad v0.3: Protección térmica pasiva (activada por defecto)
+
+Mientras "Despierto con tapa cerrada" está activo, KeepAwake monitoriza el estado térmico del sistema (`NSProcessInfo.thermalState`):
+
+- `Serious` durante 60 s → desactiva automáticamente "Despierto con tapa cerrada" para que el sistema pueda suspenderse y enfriarse
+- `Critical` → lo desactiva inmediatamente
+
+Cuando se activa, se muestra una notificación y un banner de aviso en la parte superior del menú. Puedes desactivarlo en las preferencias del menú ("Protección térmica con tapa cerrada"), pero **no se recomienda**.
+
+**Recordatorio: la protección pasiva por software no sustituye a la refrigeración física.** Sigue evitando "tapa cerrada + carga pesada + rejillas bloqueadas".
 
 ## 🔒 Sobre el código fuente
 

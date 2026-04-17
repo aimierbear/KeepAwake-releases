@@ -28,7 +28,7 @@ Chaque `.dmg` est signé avec le Developer ID `C3SNXE45AV (Xiaoneng Wu)` et nota
 
 ## 📥 Installation
 
-1. Téléchargez `KeepAwake-0.2.0.dmg` depuis la [dernière version](../../releases/latest)
+1. Téléchargez `KeepAwake-0.3.0.dmg` depuis la [dernière version](../../releases/latest)
 2. Double-cliquez sur le DMG pour le monter, faites glisser **KeepAwake.app** dans `/Applications`
 3. Lancez depuis Launchpad ou Applications
 4. La première fois que vous activez « Éveillé capot fermé », macOS demandera l'autorisation d'ajouter un élément en arrière-plan → cliquez sur **Autoriser**
@@ -56,6 +56,17 @@ Chaque `.dmg` est signé avec le Developer ID `C3SNXE45AV (Xiaoneng Wu)` et nota
 `Empêcher la veille d'inactivité` annule aussi l'économie de batterie. Activez-le quand vous en avez besoin, désactivez-le quand c'est fini.
 
 **KeepAwake ne surveille pas la température ni la charge. La gestion des risques vous revient.**
+
+### 🌡️ Nouveauté v0.3 : Protection thermique passive (activée par défaut)
+
+Lorsque « Éveillé capot fermé » est activé, KeepAwake surveille l'état thermique du système (`NSProcessInfo.thermalState`) :
+
+- `Serious` pendant 60 s → désactive automatiquement « Éveillé capot fermé » pour que le système puisse se mettre en veille et refroidir
+- `Critical` → désactivation immédiate
+
+Lors du déclenchement, une notification est affichée et une bannière d'avertissement apparaît en haut du menu. Vous pouvez la désactiver dans les préférences du menu (« Protection thermique capot fermé »), mais **ce n'est pas recommandé**.
+
+**Rappel : une protection logicielle passive ne remplace pas un refroidissement physique.** Évitez toujours « capot fermé + charge lourde + aérations bloquées ».
 
 ## 🔒 À propos du code source
 

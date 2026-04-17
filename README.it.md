@@ -28,7 +28,7 @@ Ogni `.dmg` è firmato con Developer ID `C3SNXE45AV (Xiaoneng Wu)` e notarizzato
 
 ## 📥 Installazione
 
-1. Scarica `KeepAwake-0.2.0.dmg` dalla [ultima versione](../../releases/latest)
+1. Scarica `KeepAwake-0.3.0.dmg` dalla [ultima versione](../../releases/latest)
 2. Doppio clic sul DMG per montarlo, trascina **KeepAwake.app** in `/Applications`
 3. Avvia da Launchpad o dalla cartella Applicazioni
 4. Al primo attivamento di "Sveglio a coperchio chiuso", macOS chiederà il permesso di aggiungere un elemento in background → clicca **Consenti**
@@ -56,6 +56,17 @@ Ogni `.dmg` è firmato con Developer ID `C3SNXE45AV (Xiaoneng Wu)` e notarizzato
 `Impedire sospensione da inattività` sovrascrive anche il risparmio energetico. Attivalo quando serve, disattivalo quando non serve più.
 
 **KeepAwake non monitora temperatura né carico. La gestione del rischio è a carico tuo.**
+
+### 🌡️ Novità v0.3: Protezione termica passiva (attiva per impostazione predefinita)
+
+Mentre "Sveglio a coperchio chiuso" è attivo, KeepAwake monitora lo stato termico del sistema (`NSProcessInfo.thermalState`):
+
+- `Serious` per 60 s → disattiva automaticamente "Sveglio a coperchio chiuso" per permettere al sistema di sospendersi e raffreddarsi
+- `Critical` → disattivazione immediata
+
+Quando scatta, appare una notifica e un banner di avviso in cima al menu. Puoi disattivarla nelle preferenze del menu ("Protezione termica a coperchio chiuso"), ma **non è consigliato**.
+
+**Promemoria: la protezione software passiva non sostituisce il raffreddamento fisico.** Continua a evitare "coperchio chiuso + carico pesante + ventole ostruite".
 
 ## 🔒 Riguardo al codice sorgente
 

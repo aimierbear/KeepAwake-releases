@@ -28,7 +28,7 @@ Jede `.dmg` ist mit der Developer ID `C3SNXE45AV (Xiaoneng Wu)` signiert und von
 
 ## 📥 Installation
 
-1. Lade `KeepAwake-0.2.0.dmg` aus der [neuesten Version](../../releases/latest) herunter
+1. Lade `KeepAwake-0.3.0.dmg` aus der [neuesten Version](../../releases/latest) herunter
 2. Doppelklicke auf die DMG zum Einbinden, ziehe **KeepAwake.app** nach `/Applications`
 3. Starte aus dem Launchpad oder dem Programme-Ordner
 4. Beim ersten Aktivieren von „Wach bei geschlossenem Deckel" fragt macOS nach Erlaubnis, ein Hintergrundobjekt hinzuzufügen → klicke auf **Erlauben**
@@ -56,6 +56,17 @@ Jede `.dmg` ist mit der Developer ID `C3SNXE45AV (Xiaoneng Wu)` signiert und von
 `Inaktivitäts-Ruhezustand verhindern` überschreibt ebenfalls das Akkusparverhalten. Schalte es ein, wenn du es brauchst, und aus, wenn du es nicht mehr brauchst.
 
 **KeepAwake überwacht weder Temperatur noch Last. Risikomanagement liegt bei dir.**
+
+### 🌡️ Neu in v0.3: Passiver Überhitzungsschutz (standardmäßig aktiv)
+
+Während „Wach bei geschlossenem Deckel" aktiv ist, überwacht KeepAwake den thermischen Zustand des Systems (`NSProcessInfo.thermalState`):
+
+- `Serious` für 60 s → schaltet „Wach bei geschlossenem Deckel" automatisch aus, damit das System in den Ruhezustand wechseln und abkühlen kann
+- `Critical` → sofort ausgeschaltet
+
+Bei Auslösung erscheint eine Benachrichtigung, und oben im Menü wird ein Warnhinweis angezeigt. Du kannst es in den Menü-Einstellungen („Überhitzungsschutz bei geschlossenem Deckel") deaktivieren, **das wird jedoch nicht empfohlen**.
+
+**Erinnerung: Passiver Software-Schutz ersetzt keine physische Kühlung.** Vermeide weiterhin „Deckel geschlossen + hohe Last + blockierte Lüftungsöffnungen".
 
 ## 🔒 Über den Quellcode
 
